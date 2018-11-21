@@ -11,7 +11,7 @@ public interface ConteudoCelebridadeService {
     String URL_BASE = "http://10.0.2.2:5001/";
 
     @GET("/conteudoCelebridade")
-    Call<List<ConteudoCelebridade>> obterConteudoCelebridade();
+    Call<List<ConteudoCelebridade>> preencherConteudoCelebridade();
 
 
 

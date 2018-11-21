@@ -18,5 +18,7 @@ public class ConteudoCelebridadeActivity extends Activity{
         Window window = getWindow();
         window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
+
+
     }
 }

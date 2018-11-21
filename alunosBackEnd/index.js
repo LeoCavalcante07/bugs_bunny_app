@@ -1,4 +1,4 @@
-const app = require('express')();
+ const app = require('express')();
 const http = require('http').createServer(app);
 //const config = require('./config')
 const bodyParser = require("body-parser");
@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 var connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: '',
+  password: 'bcd127',
   database: 'db_bugs_bunny'
 });
 

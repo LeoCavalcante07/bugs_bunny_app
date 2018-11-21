@@ -47,8 +47,8 @@ public class LoginActivity extends Activity implements LoginView{
                 String usuario = edUsuario.getText().toString();
                 String senha = edSenha.getText().toString();
 
-                Log.d("usuario", usuario);
-                Log.d("senha", senha);
+                //Log.d("usuario", usuario);
+                //Log.d("senha", senha);
 
                 presenter.mandarParaLogin(usuario, senha);
             }
@@ -62,6 +62,7 @@ public class LoginActivity extends Activity implements LoginView{
 
     @Override
     public void naoLogou() {
-        startActivity(new Intent(this, LoginActivity.class));
+        startActivity(new Intent(this, ErroConexaoActivity.class));
+
     }
 }

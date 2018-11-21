@@ -1,5 +1,7 @@
 package br.com.senaijandira.bugsbunnyapp.presenter;
 
+import android.util.Log;
+
 import br.com.senaijandira.bugsbunnyapp.model.Usuario;
 import br.com.senaijandira.bugsbunnyapp.service.UsuarioService;
 import br.com.senaijandira.bugsbunnyapp.view.LoginView;
@@ -24,12 +26,20 @@ public class LoginPresenter {
                 .enqueue(new Callback<Usuario>() {
                     @Override
                     public void onResponse(Call<Usuario> call, Response<Usuario> response) {
+                       /* if(){
+                            view.logou();
+                        }else{
+                            view.naoLogou();
+                        }*/
+
                         view.logou();
+
                     }
 
                     @Override
                     public void onFailure(Call<Usuario> call, Throwable t) {
                         view.naoLogou();
+                        Log.e("ERRO_API", t.getMessage());
                     }
                 });
 
