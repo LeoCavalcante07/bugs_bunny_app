@@ -6,6 +6,8 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.util.Log;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.EditText;
 
@@ -28,6 +30,9 @@ public class LoginActivity extends Activity implements LoginView{
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
+
+        Window window = getWindow();
+        window.setFlags(WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS, WindowManager.LayoutParams.FLAG_LAYOUT_NO_LIMITS);
 
         presenter = new LoginPresenter(ServiceFactory.create(), this);
 
@@ -52,7 +57,7 @@ public class LoginActivity extends Activity implements LoginView{
 
     @Override
     public void logou() {
-        startActivity(new Intent(this, MainActivity.class));
+        startActivity(new Intent(this, ConteudoCelebridadeActivity.class));
     }
 
     @Override
