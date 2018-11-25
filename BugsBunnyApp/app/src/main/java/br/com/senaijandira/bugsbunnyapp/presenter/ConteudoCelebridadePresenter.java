@@ -21,9 +21,17 @@ public class ConteudoCelebridadePresenter {
     }
 
     public void pegarInformaoes(){
-        service.obterConteudoCelebridade().enqueue(new Callback<List<ConteudoCelebridade>>() {
+
+        Call<List<ConteudoCelebridade>> call = service.preencherConteudoCelebridade();
+
+        call.enqueue(new Callback<List<ConteudoCelebridade>>() {
             @Override
+
             public void onResponse(Call<List<ConteudoCelebridade>> call, Response<List<ConteudoCelebridade>> response) {
+                ConteudoCelebridade cc = response.body();
+
+                //cc.setBanner(response.body());
+
 
             }
 
