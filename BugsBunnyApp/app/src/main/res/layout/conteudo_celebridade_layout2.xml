@@ -9,14 +9,6 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal">
 
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="220dp"
-            android:src="@drawable/erro_conexao"
-            android:layout_weight="1"
-            android:id="@+id/imgCC"/>
-
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -29,17 +21,26 @@
                 android:layout_height="wrap_content"
                 android:text="titulo"
                 android:layout_marginLeft="50dp"
-                android:id="@+id/txtTituloCC"/>
+                android:id="@+id/txtTituloCC2"/>
 
             <TextView
                 android:layout_marginTop="20dp"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
-                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginLeft="15dp"
                 android:text="@string/teste"
-                android:id="@+id/txtTextoCC"/>
+                android:id="@+id/txtTextoCC2"/>
 
         </LinearLayout>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:src="@drawable/erro_conexao"
+            android:layout_weight="1"
+            android:id="@+id/imgCC2"/>
 
 
 

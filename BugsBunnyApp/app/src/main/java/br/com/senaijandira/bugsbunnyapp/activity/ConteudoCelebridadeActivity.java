@@ -44,10 +44,6 @@ public class ConteudoCelebridadeActivity extends Activity implements ConteudoCel
 
         presenter = new ConteudoCelebridadePresenter(service, this);
 
-
-
-
-
     }
 
 

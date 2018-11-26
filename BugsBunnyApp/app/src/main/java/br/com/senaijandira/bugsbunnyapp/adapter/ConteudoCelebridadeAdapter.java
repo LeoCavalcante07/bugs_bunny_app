@@ -10,6 +10,8 @@ import android.widget.ArrayAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.squareup.picasso.Picasso;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -27,7 +29,7 @@ public class ConteudoCelebridadeAdapter extends ArrayAdapter<ConteudoCelebridade
     @Override
     public View getView(int position, @Nullable View convertView, @NonNull ViewGroup parent) {
         View view = convertView;
-
+        
         if(view == null){
             view = LayoutInflater.from(getContext()).inflate(R.layout.conteudo_celebridade_layout, parent, false);
         }
@@ -39,6 +41,9 @@ public class ConteudoCelebridadeAdapter extends ArrayAdapter<ConteudoCelebridade
         TextView txtTituloCC = view.findViewById(R.id.txtTituloCC);
 
 
+        String urlImagem = "http:10.0.2.2/leonardo/bugsBunny/modulo_2/CMS/"+cc.getFoto();
+
+        Picasso.get().load(urlImagem).into(imgCC);
         txtTextoCC.setText(cc.getTexto());
         txtTituloCC.setText(cc.getTitulo());
 
