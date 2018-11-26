@@ -11,14 +11,15 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
+import java.util.List;
 
 import br.com.senaijandira.bugsbunnyapp.R;
 import br.com.senaijandira.bugsbunnyapp.model.ConteudoCelebridade;
 
 public class ConteudoCelebridadeAdapter extends ArrayAdapter<ConteudoCelebridade> {
 
-    public ConteudoCelebridadeAdapter(Context contexto){
-        super(contexto, 0, new ArrayList<ConteudoCelebridade>());
+    public ConteudoCelebridadeAdapter(Context contexto, List<ConteudoCelebridade> listaConteudo){
+        super(contexto, 0, listaConteudo);
     }
 
 

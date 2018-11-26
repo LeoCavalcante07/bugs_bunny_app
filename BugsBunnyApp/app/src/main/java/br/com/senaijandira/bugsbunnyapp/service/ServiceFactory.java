@@ -1,5 +1,7 @@
 package br.com.senaijandira.bugsbunnyapp.service;
 
+import android.content.Context;
+
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
@@ -19,5 +21,13 @@ public class ServiceFactory {
 
                 return retrofit.create(UsuarioService.class);
         }
+
+
+
+//        public static ConteudoCelebridadeService create(){
+//                Retrofit retrofit = new Retrofit.Builder().baseUrl(UsuarioService.URL_BASE).addConverterFactory(GsonConverterFactory.create()).build();
+//
+//                return retrofit.create(ConteudoCelebridadeService.class);
+//        }
 
 }

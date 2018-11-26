@@ -3,6 +3,7 @@ package br.com.senaijandira.bugsbunnyapp.service;
 import java.util.List;
 
 import br.com.senaijandira.bugsbunnyapp.model.ApiResult;
+import br.com.senaijandira.bugsbunnyapp.model.ConteudoCelebridade;
 import br.com.senaijandira.bugsbunnyapp.model.Usuario;
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -27,6 +28,10 @@ public interface UsuarioService {
 
     @GET("/deleteUsuario/{id}")
     Call<ApiResult> deletarUsuario(@Path("id") int id);
+
+
+    @GET("/conteudoCelebridade")
+    Call<List<ConteudoCelebridade>> preencherConteudoCelebridade();
 
 
 

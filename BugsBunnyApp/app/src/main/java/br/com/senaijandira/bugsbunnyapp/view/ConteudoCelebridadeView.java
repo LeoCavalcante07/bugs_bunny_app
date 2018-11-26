@@ -1,9 +1,14 @@
 package br.com.senaijandira.bugsbunnyapp.view;
 
+import java.util.ArrayList;
+import java.util.List;
+
+import br.com.senaijandira.bugsbunnyapp.model.ConteudoCelebridade;
+
 public interface ConteudoCelebridadeView {
 
-    void trouxe();
+    void preencherTela(List<ConteudoCelebridade> cc);
 
-    void naoTrouxe();
+    //void naoTrouxe();
 
 }

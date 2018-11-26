@@ -332,8 +332,9 @@ app.get("/conteudoCelebridade", (req, res)=>{
 	var sql = "select * from tbl_conteudo_celebridade"
 	
 	connection.query(sql, function(err, rows, fields){
-		if(err) throw err;
+		//if(err) throw err;
 		
+        /*
 		for (var i in rows){
 			
             const conteudoCelebridade = [{
@@ -348,14 +349,14 @@ app.get("/conteudoCelebridade", (req, res)=>{
 		
             conteudosCelebridade.push(conteudoCelebridade)
 		}
+		*/
 		
-		
-		
+		res.send(rows)
 
 		
 	})
 	
-	res.send(conteudosCelebridade)
+	
 	
 });
 
