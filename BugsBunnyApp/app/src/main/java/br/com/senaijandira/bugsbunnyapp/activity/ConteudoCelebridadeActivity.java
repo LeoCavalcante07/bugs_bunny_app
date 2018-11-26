@@ -5,10 +5,14 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.view.Window;
 import android.view.WindowManager;
+import android.widget.ImageView;
 import android.widget.ListView;
+
+import com.squareup.picasso.Picasso;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 
 import br.com.senaijandira.bugsbunnyapp.R;
 import br.com.senaijandira.bugsbunnyapp.adapter.ConteudoCelebridadeAdapter;
@@ -56,6 +60,15 @@ public class ConteudoCelebridadeActivity extends Activity implements ConteudoCel
 
     @Override
     public void preencherTela(List<ConteudoCelebridade> cc) {
+        ImageView banner = findViewById(R.id.banner);
+
+        Random random = new Random();
+
+        int numAleatorio = random.nextInt(cc.size());
+
+        String urlImagem = "http:10.0.2.2/leonardo/bugsBunny/modulo_2/CMS/"+cc.get(numAleatorio).getBanner();
+        Picasso.get().load(urlImagem).into(banner);
+
         adapter = new ConteudoCelebridadeAdapter(this, cc);
         //adapter.addAll(cc);
         lstConteudoCelebridade.setAdapter(adapter);

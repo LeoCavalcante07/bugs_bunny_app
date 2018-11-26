@@ -57,7 +57,7 @@ public class LoginActivity extends Activity implements LoginView{
 
     @Override
     public void logou() {
-        startActivity(new Intent(this, ConteudoCelebridadeActivity.class));
+        startActivity(new Intent(this, MainActivity.class));
     }
 
     @Override

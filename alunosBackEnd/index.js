@@ -329,7 +329,7 @@ app.get("/celebridade/:id", (req, res)=>{
 //VER CONTEUDO DA CELEBRIDADE
 app.get("/conteudoCelebridade", (req, res)=>{
 	
-	var sql = "select * from tbl_conteudo_celebridade"
+	var sql = "select * from tbl_conteudo_celebridade as cc, tbl_celebridade as c where c.idCelebridade = cc.idCelebridade and cc.status = 1 and c.status = 1"
 	
 	connection.query(sql, function(err, rows, fields){
 		//if(err) throw err;
