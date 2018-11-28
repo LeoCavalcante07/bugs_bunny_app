@@ -10,7 +10,6 @@ import android.widget.ListView;
 
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
 
@@ -18,7 +17,6 @@ import br.com.senaijandira.bugsbunnyapp.R;
 import br.com.senaijandira.bugsbunnyapp.adapter.ConteudoCelebridadeAdapter;
 import br.com.senaijandira.bugsbunnyapp.model.ConteudoCelebridade;
 import br.com.senaijandira.bugsbunnyapp.presenter.ConteudoCelebridadePresenter;
-
 import br.com.senaijandira.bugsbunnyapp.service.ServiceFactory;
 import br.com.senaijandira.bugsbunnyapp.service.UsuarioService;
 import br.com.senaijandira.bugsbunnyapp.view.ConteudoCelebridadeView;
@@ -66,7 +64,8 @@ public class ConteudoCelebridadeActivity extends Activity implements ConteudoCel
 
         int numAleatorio = random.nextInt(cc.size());
 
-        String urlImagem = "http:10.0.2.2/leonardo/bugsBunny/modulo_2/CMS/"+cc.get(numAleatorio).getBanner();
+        //String urlImagem = "http:10.0.2.2/leonardo/bugsBunny/modulo_2/CMS/"+cc.get(numAleatorio).getBanner();
+        String urlImagem = "http:10.0.2.2/Leonardo/bugsBunny/CMS/"+cc.get(numAleatorio).getBanner();
         Picasso.get().load(urlImagem).into(banner);
 
         adapter = new ConteudoCelebridadeAdapter(this, cc);

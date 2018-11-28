@@ -12,7 +12,6 @@ import android.widget.TextView;
 
 import com.squareup.picasso.Picasso;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import br.com.senaijandira.bugsbunnyapp.R;
@@ -42,7 +41,7 @@ public class ConteudoCelebridadeAdapter extends ArrayAdapter<ConteudoCelebridade
             TextView txtTituloCC = view.findViewById(R.id.txtTituloCC);
 
 
-            String urlImagem = "http:10.0.2.2/leonardo/bugsBunny/modulo_2/CMS/"+cc.getFoto();
+            String urlImagem = "http:10.0.2.2/Leonardo/bugsBunny/CMS/"+cc.getFoto();
 
             Picasso.get().load(urlImagem).into(imgCC);
             txtTextoCC.setText(cc.getTexto());
