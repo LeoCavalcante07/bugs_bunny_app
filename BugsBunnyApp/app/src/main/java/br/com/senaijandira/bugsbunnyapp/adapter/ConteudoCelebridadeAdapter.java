@@ -41,7 +41,8 @@ public class ConteudoCelebridadeAdapter extends ArrayAdapter<ConteudoCelebridade
             TextView txtTituloCC = view.findViewById(R.id.txtTituloCC);
 
 
-            String urlImagem = "http:10.0.2.2/Leonardo/bugsBunny/CMS/"+cc.getFoto();
+            //String urlImagem = "http:10.0.2.2/Leonardo/bugsBunny/CMS/"+cc.getFoto();
+            String urlImagem = "http:10.0.2.2/inf3m20182/TURMAB/Leonardo/PROJETO/modulo_2/CMS/"+cc.getFoto();
 
             Picasso.get().load(urlImagem).into(imgCC);
             txtTextoCC.setText(cc.getTexto());
@@ -58,15 +59,12 @@ public class ConteudoCelebridadeAdapter extends ArrayAdapter<ConteudoCelebridade
             TextView txtTituloCC = view.findViewById(R.id.txtTituloCC2);
 
 
-            String urlImagem = "http:10.0.2.2/leonardo/bugsBunny/modulo_2/CMS/"+cc.getFoto();
-
+            //String urlImagem = "http:10.0.2.2/leonardo/bugsBunny/modulo_2/CMS/"+cc.getFoto();
+            String urlImagem = "http:10.0.2.2/inf3m20182/TURMAB/Leonardo/PROJETO/modulo_2/CMS/"+cc.getFoto();
             Picasso.get().load(urlImagem).into(imgCC);
             txtTextoCC.setText(cc.getTexto());
             txtTituloCC.setText(cc.getTitulo());
         }
-
-
-
 
         return view;
 

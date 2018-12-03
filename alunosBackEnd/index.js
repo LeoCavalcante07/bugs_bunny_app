@@ -27,7 +27,7 @@ app.use(bodyParser.json());
 var connection = mysql.createConnection({
   host: 'localhost',
   user: 'root',
-  password: '',
+  password: 'bcd127',
   database: 'db_bugs_bunny'
 });
 
@@ -329,27 +329,10 @@ app.get("/celebridade/:id", (req, res)=>{
 //VER CONTEUDO DA CELEBRIDADE
 app.get("/conteudoCelebridade", (req, res)=>{
 	
-	var sql = "select * from tbl_conteudo_celebridade as cc, tbl_celebridade as c where c.idCelebridade = cc.idCelebridade and cc.status = 1 and c.status = 1"
+	var sql = "select cc.idConteudoCelebridade, cc.titulo, cc.texto, cc.foto, cc.banner from tbl_conteudo_celebridade as cc, tbl_celebridade as c where c.idCelebridade = cc.idCelebridade and cc.status = 1 and c.status = 1"
 	
 	connection.query(sql, function(err, rows, fields){
-		//if(err) throw err;
-		
-        /*
-		for (var i in rows){
-			
-            const conteudoCelebridade = [{
-				"idConteudoCelebridade": rows[i].idConteudoCelebridade,
-				"titulo": rows[i].titulo,
-                "texto": rows[i].texto,
-                "foto": rows[i].foto,
-                "banner": rows[i].banner,
-                "idCelebridade": rows[i].idCelebridade ,
-				"status": rows[i].status
-			}]			
-		
-            conteudosCelebridade.push(conteudoCelebridade)
-		}
-		*/
+
 		
 		res.send(rows)
 
