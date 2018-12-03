@@ -8,6 +8,7 @@
     android:orientation="vertical">
 
     <TextView
+        android:layout_marginTop="50dp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="BugsBunny"
@@ -16,24 +17,58 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <ImageView
-            android:layout_width="100dp"
-            android:layout_height="100dp"
-            android:layout_marginLeft="30dp"
-            android:src="@drawable/celebridade"
-            android:onClick="irCelebridade"/>
-
-        <ImageView
-            android:layout_width="250dp"
-            android:layout_height="250dp"/>
+        android:orientation="horizontal"
+        android:layout_marginTop="100dp">
 
 
-        <ImageView
-            android:layout_width="250dp"
-            android:layout_height="250dp"
-            android:layout_marginLeft="30dp"/>
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/view"
+                android:onClick="irCelebridade" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:text="Ver Página"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/robot"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="22sp"
+                android:gravity="center"
+                android:text="Manipular Página"/>
+
+        </LinearLayout>
+
+
+
 
 
     </LinearLayout>

@@ -4,26 +4,27 @@
     android:layout_height="match_parent">
 
     <LinearLayout
-        android:paddingTop="50dp"
+
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="vertical">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="titulo"
+            android:textSize="20dp"
+            android:textStyle="bold"
+            android:layout_marginLeft="10dp"
+            android:id="@+id/txtTituloCC2"/>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="titulo"
-                android:textSize="20dp"
-                android:textStyle="bold"
-                android:layout_marginLeft="50dp"
-                android:id="@+id/txtTituloCC2"/>
 
             <TextView
                 android:layout_marginTop="20dp"
@@ -31,19 +32,19 @@
                 android:layout_height="200dp"
                 android:layout_marginRight="25dp"
                 android:layout_marginLeft="15dp"
+                android:layout_weight="1"
                 android:text="@string/teste"
                 android:id="@+id/txtTextoCC2"/>
 
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:src="@drawable/erro_conexao"
+                android:layout_weight="1"
+                android:id="@+id/imgCC2"/>
+
         </LinearLayout>
-
-
-        <ImageView
-            android:layout_width="match_parent"
-            android:layout_height="200dp"
-            android:src="@drawable/erro_conexao"
-            android:layout_weight="1"
-            android:id="@+id/imgCC2"/>
-
 
 
     </LinearLayout>
