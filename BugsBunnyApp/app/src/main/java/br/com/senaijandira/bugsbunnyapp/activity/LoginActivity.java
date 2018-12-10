@@ -1,6 +1,9 @@
 package br.com.senaijandira.bugsbunnyapp.activity;
 
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
@@ -64,5 +67,34 @@ public class LoginActivity extends Activity implements LoginView{
     public void naoLogou() {
         startActivity(new Intent(this, ErroConexaoActivity.class));
 
+    }
+
+    @Override
+    public void usuarioIncorreto() {
+        alert("Erro", "Usuário ou senha incorreto");
+    }
+
+
+
+
+    public void alert(String titulo, String msg){
+
+        AlertDialog.Builder alert = new AlertDialog.Builder(this);
+        alert.setTitle(titulo);
+        alert.setMessage(msg);
+
+        //COMANDO PARA NÃO FECHAR O ALERT CLICANDO FORA DA CAIXA
+        alert.setCancelable(false);
+
+        alert.setPositiveButton("OK", new Dialog.OnClickListener(){
+
+            @Override
+            public void onClick(DialogInterface dialog, int which) {
+                dialog.dismiss();
+            }
+
+        });
+
+        alert.create().show();
     }
 }

@@ -2,6 +2,7 @@ package br.com.senaijandira.bugsbunnyapp.presenter;
 
 import android.util.Log;
 
+import br.com.senaijandira.bugsbunnyapp.model.ApiResult;
 import br.com.senaijandira.bugsbunnyapp.model.Usuario;
 import br.com.senaijandira.bugsbunnyapp.service.UsuarioService;
 import br.com.senaijandira.bugsbunnyapp.view.LoginView;
@@ -11,6 +12,7 @@ import retrofit2.Response;
 
 public class LoginPresenter {
 
+    ApiResult apiResult;
     UsuarioService uService;
     LoginView view;
 
@@ -23,22 +25,25 @@ public class LoginPresenter {
 
         uService.logar(email, senha)
 
-                .enqueue(new Callback<Usuario>() {
+                .enqueue(new Callback<ApiResult>() {
                     @Override
-                    public void onResponse(Call<Usuario> call, Response<Usuario> response) {
-                       /* if(){
-                            view.logou();
-                        }else{
-                            view.naoLogou();
-                        }*/
+                    public void onResponse(Call<ApiResult> call, Response<ApiResult> response) {
 
-                        view.logou();
+                        apiResult = response.body();
+                        if(!apiResult.isSucesso()){
+                            view.usuarioIncorreto();
+                        }else{
+
+                            view.logou();
+                        }
+
+
 
                     }
 
                     @Override
-                    public void onFailure(Call<Usuario> call, Throwable t) {
-                        view.naoLogou();
+                    public void onFailure(Call<ApiResult> call, Throwable t) {
+                        view.logou();
                         Log.e("ERRO_API", t.getMessage());
                     }
                 });

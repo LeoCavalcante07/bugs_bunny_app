@@ -6,4 +6,6 @@ public interface LoginView {
 
     void naoLogou();
 
+    void usuarioIncorreto();
+
 }

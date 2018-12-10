@@ -24,7 +24,7 @@ public interface UsuarioService {
 
     @FormUrlEncoded
     @POST("/logar")
-    Call<Usuario> logar(@Field("email") String email, @Field("senha") String senha);
+    Call<ApiResult> logar(@Field("email") String email, @Field("senha") String senha);
 
     @GET("/deleteUsuario/{id}")
     Call<ApiResult> deletarUsuario(@Path("id") int id);

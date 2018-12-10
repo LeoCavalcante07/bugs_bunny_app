@@ -25,6 +25,8 @@
         </activity>
         <activity android:theme="@style/tema" android:name=".activity.MainActivity"></activity>
         <activity android:theme="@style/tema" android:name=".activity.ConteudoCelebridadeActivity"></activity>
+
+        <activity android:theme="@style/tema" android:name=".activity.ErroConexaoActivity"></activity>
     </application>
 
 </manifest>

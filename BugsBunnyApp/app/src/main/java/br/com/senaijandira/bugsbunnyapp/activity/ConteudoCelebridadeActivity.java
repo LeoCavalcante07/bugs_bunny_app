@@ -65,7 +65,7 @@ public class ConteudoCelebridadeActivity extends Activity implements ConteudoCel
         int numAleatorio = random.nextInt(cc.size());
 
         /*REAL*/
-        String urlImagem = "http:10.0.2.2/leonardo/bugsBunny/modulo_2/CMS/"+cc.get(numAleatorio).getBanner();
+        String urlImagem = "http:10.0.2.2/"+cc.get(numAleatorio).getBanner();
 
         /*NOTEBOOK*/
         //String urlImagem = "http:10.0.2.2/Leonardo/bugsBunny/CMS/"+cc.get(numAleatorio).getBanner();

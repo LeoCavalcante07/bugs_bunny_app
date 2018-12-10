@@ -4,6 +4,7 @@ public class ApiResult {
 
     private boolean sucesso;
     private String msg;
+    private Usuario usuario;
 
 
     public boolean isSucesso() {
@@ -20,5 +21,13 @@ public class ApiResult {
 
     public void setMsg(String msg) {
         this.msg = msg;
+    }
+
+    public Usuario getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(Usuario usuario) {
+        this.usuario = usuario;
     }
 }

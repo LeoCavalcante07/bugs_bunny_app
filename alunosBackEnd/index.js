@@ -110,7 +110,11 @@ app.post("/logar", (req, res)=>{
     
             
         }else{
-            throw err;   
+            res.send({
+               sucesso:false,
+               msg:"Usuario ou senha incorreto",
+               usuario:rows[0]                  
+            })
         }
 
         

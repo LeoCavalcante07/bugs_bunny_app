@@ -49,7 +49,7 @@ public class ConteudoCelebridadeAdapter extends ArrayAdapter<ConteudoCelebridade
 
 
             /*REAL */
-            String urlImagem = "http:10.0.2.2/leonardo/bugsBunny/modulo_2/CMS/"+cc.getFoto();
+            String urlImagem = "http:10.0.2.2/"+cc.getFoto();
 
             Picasso.get().load(urlImagem).into(imgCC);
             txtTextoCC.setText(cc.getTexto());
@@ -67,7 +67,7 @@ public class ConteudoCelebridadeAdapter extends ArrayAdapter<ConteudoCelebridade
 
 
             /*REAL */
-            String urlImagem = "http:10.0.2.2/leonardo/bugsBunny/modulo_2/CMS/"+cc.getFoto();
+            String urlImagem = "http:10.0.2.2/"+cc.getFoto();
 
             //String urlImagem = "http:10.0.2.2/inf3m20182/TURMAB/Leonardo/PROJETO/modulo_2/CMS/"+cc.getFoto();
             Picasso.get().load(urlImagem).into(imgCC);
